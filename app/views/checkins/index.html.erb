@@ -1,0 +1,30 @@
+<h1>Checkins#index</h1>
+<p>Find me in app/views/checkins/index.html.erb</p>
+
+<%= form_for(@checkin, multipart: true) do |f| %>
+  <% if @checkin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@checkin.errors.count, "error") %> prohibited this friend from being saved:</h2>
+
+      <ul>
+      <% @checkin.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :photo %>
+    <%= f.file_field :photo %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Submit a photo' %>
+  </div>
+<% end %>
+
+
