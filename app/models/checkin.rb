@@ -19,6 +19,6 @@ class Checkin < ActiveRecord::Base
 	# :bucket => 'scenic49' 
 
  #  # Validate the attached image is image/jpg, image/png, etc
- #  validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
+   validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
 	
 end
